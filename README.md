@@ -1,6 +1,7 @@
 Pyanimation
 ===========
-A module to easily create animations in pygame
+A python module to easily create animations in pygame
+
 Setup
 -----
 ```bash
