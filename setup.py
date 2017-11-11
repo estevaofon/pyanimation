@@ -8,7 +8,7 @@ setup(name='pyanimation',
       author_email='estevaopfon@gmail.com',
       url='https://github.com/estevaofon/pyanimation',
       packages=['pyanimation'],
-      download_url='https://github.com/estevaofon/pyanimation/archive/0.1.tar.gz',
+      download_url='https://github.com/estevaofon/pyanimation/archive/0.2.tar.gz',
       keywords=['pygame', 'animation', 'pyanimation'],
       classifiers=[],
       )
