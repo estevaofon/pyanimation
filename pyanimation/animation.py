@@ -3,14 +3,11 @@ import pygame
 
 
 class Animation:
-    def __init__(self, initial_action, speed=15):
-        self.action = initial_action
+    def __init__(self, image_path):
         self.x = 250
         self.y = 200
-        self.ani_speed = speed
         self.ani_pos = 0
         self.ani_max = 0
-        self.sprite_sheet = None
         self.animation = []
         self.dict_of_rects = {}
         self.animation_speed = {}
@@ -18,37 +15,41 @@ class Animation:
         self.manual_list = []
         self.hold_state = {}
         self.facing_right = True
+        self.load_sprites(image_path)
 
-    def rect_list(self, xo, yo, lx, ly, n, rows):
+    def rect_list(self, xo, yo, sprite_width, sprite_height, cols, rows):
         """
         Build a list of rectangles sprites
-        xo,yo initial points at the top left corner
-        lx,ly length of sprites
-        n number of sprites
         """
         rect = []
         for row in range(rows):
-            for i in range(n):
-                rect.append(pygame.Rect(xo+lx*i, yo+ly*row, lx, ly))
+            for i in range(cols):
+                rect.append(pygame.Rect(xo+sprite_width*i, yo+sprite_height*row, sprite_width, sprite_height))
         return rect
 
-    def insert_frame(self, xo, yo, lx, ly):
+    def insert_frame(self, xo, yo, sprite_width, sprite_height):
         """
         Insert frame by frame manually
-        xo,yo initial points at the top left corner
-        lx,ly length of sprites
+        xo,yo: initial points at the top left corner
+        sprite_width,sprite_height: length of sprites
         """
-        self.manual_list.append(pygame.Rect(xo, yo, lx, ly))
+        self.manual_list.append(pygame.Rect(xo, yo, sprite_width, sprite_height))
 
-    def build_animation(self, action, hold=False, speed=15):
+    def build_animation(self, action, hold=False, duration=40):
         """
         Build Animation from the inserted frames
         and sets a name for the animation
+        duration: duration of the animation in milliseconds
         """
+        speed = round(duration/16.66)
+        if speed <= 0:
+            speed = 1
+        self.ani_speed = speed
         self.animation_speed[action] = speed
         self.dict_of_rects[action] = self.manual_list
         self.manual_list = []
         self.hold_state[action] = hold
+        self.action = action
 
     def erase_positions(self, action, indexes):
         """
@@ -81,17 +82,23 @@ class Animation:
         image_path = os.path.abspath(image_path)
         self.sprite_sheet = (pygame.image.load(image_path).convert_alpha())
 
-    def create_animation(self, xo, yo, lx, ly, n, action, hold=False, speed=15, rows=1):
+    def create_animation(self, xo, yo, sprite_width, sprite_height, cols, action, hold=False, duration=40, rows=1):
         """
         Create an intire animation and sets a label to the animation
         xo,yo: initial points at the top left corner
-        lx,ly: length of sprites
-        n: number of frames per row
+        sprite_width,sprite_height: length of sprites
+        cols: number of sprites per row
         hold: True to run animation just once or false to keep running
+        duration: duration of the animation in milliseconds
         """
+        speed = round(duration/16.66)
+        if speed <= 0:
+            speed = 1
+        self.ani_speed = speed
         self.animation_speed[action] = speed
-        self.dict_of_rects[action] = self.rect_list(xo, yo, lx, ly, n, rows)
+        self.dict_of_rects[action] = self.rect_list(xo, yo, sprite_width, sprite_height, cols, rows)
         self.hold_state[action] = hold
+        self.action = action
 
     def frame_list(self, action):
         return self.dict_of_rects[action]

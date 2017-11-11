@@ -10,12 +10,15 @@ surface = pygame.Surface(screen.get_size())
 surface = surface.convert()
 surface.fill((255,255,255))
 clock = pygame.time.Clock()
+delta = 2
 
-girl = Animation(initial_action="run")
-girl.load_sprites("images/spritesheet.png")
-girl.create_animation(0, 0, 125, 125, 4, "run", hold=False, speed=3, rows=4)
+horse = Animation("images/horse.gif")
+horse.create_animation(0, 0, 183, 122, 4, "riding", duration=50, rows=4)
+#remove last black frame
+horse.frame_list("riding").pop()
 
-screen.blit(surface, (0, 0))
+
+screen.blit(surface, (0,0))
 
 if __name__ == '__main__':
     while True:
@@ -29,6 +32,6 @@ if __name__ == '__main__':
         screen.blit(surface, (0,0))
         clock.tick(60)
 
-        screen.blit(girl.update_surface(), (girl.x, girl.y))
+        screen.blit(horse.update_surface(), (horse.x, horse.y))
         pygame.display.flip()
         pygame.display.update()

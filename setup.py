@@ -2,7 +2,7 @@
 from distutils.core import setup
 
 setup(name='pyanimation',
-      version='0.1',
+      version='0.2',
       description='A pygame animation package',
       author='Estevao Fonseca',
       author_email='estevaopfon@gmail.com',
