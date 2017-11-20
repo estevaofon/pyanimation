@@ -8,7 +8,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(name='pyanimation',
-      version='0.3',
+      version='0.4',
       description='A pygame animation package',
       long_description=long_description,
       author='Estevao Fonseca',
