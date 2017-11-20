@@ -142,10 +142,8 @@ class Animation:
         Also flips the animation to righ or left as requested
         """
         # new animation starts at 0
-        """
         if self.local_action != self.action_name:
             self.ani_pos = 0
-        """
         self.local_action = self.action_name
         frame_list = self.frame_list(self.action_name)
         self.ani_max = len(frame_list)-1
