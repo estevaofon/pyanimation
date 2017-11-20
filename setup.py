@@ -16,7 +16,6 @@ setup(name='pyanimation',
       license='MIT',
       url='https://github.com/estevaofon/pyanimation',
       packages=['pyanimation'],
-      download_url='https://github.com/estevaofon/pyanimation/archive/0.3.tar.gz',
       install_requires=['pygame'],
       keywords=['pygame', 'animation', 'pyanimation'],
       classifiers=[

@@ -14,7 +14,7 @@ clock = pygame.time.Clock()
 goku = Animation("images/goku-ss4.png")
 
 # automatic creatin stand by position
-goku.create_animation(0, 0, 48, 70, 4, "down", hold=False, duration=250)
+goku.create_animation(0, 0, 48, 70, 4, "down", repeat=True, duration=250)
 
 # manual creation frame by frame
 #kick
@@ -25,7 +25,7 @@ goku.insert_frame(303, 443, 66, 60)
 goku.insert_frame(375, 443, 68, 60)
 goku.insert_frame(448, 443, 68, 60)
 goku.insert_frame(375, 443, 58, 60)
-goku.build_animation("kick", hold=True, duration=83)
+goku.build_animation("kick", repeat=False, duration=83)
 
 # Big-combo
 goku.insert_frame(119, 1653, 50, 80)
@@ -48,12 +48,12 @@ goku.insert_frame(375, 443, 68, 60)
 goku.insert_frame(448, 443, 68, 60)
 goku.insert_frame(375, 443, 58, 60)
 goku.insert_frame(454, 1730, 50, 80)
-goku.build_animation("combo", hold=True, duration=83)
+goku.build_animation("combo", repeat=False, duration=83)
 
 # loading
 goku.insert_frame(115, 1400, 83, 90)
 goku.insert_frame(195, 1400, 83, 90)
-goku.build_animation("load", hold=True, duration=250)
+goku.build_animation("load", repeat=False, duration=250)
 
 
 screen.blit(surface, (0,0))
@@ -83,7 +83,7 @@ if __name__ == '__main__':
                     goku.facing_right = True
 
         if time.time() - pressed_time > 1:
-            goku.action = "down"
+            goku.run("down")
         surface.fill((255,255,255))
         screen.blit(surface, (0,0))
         clock.tick(60)
