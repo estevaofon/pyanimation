@@ -58,7 +58,7 @@ Atualize a animação no loop do pygame.
 
     screen.blit(link.update_surface(), (link.x, link.y))
 
-E pronto! Rode o exemplo no seu computador para ver as duas animações geradas.
+E pronto!
 
 .. image:: /examples/images/goku-ss4.gif
 
