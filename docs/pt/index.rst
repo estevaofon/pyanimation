@@ -21,7 +21,7 @@ Defina a animação através do método create_animation abaixo
     def create_animation(self, xo, yo, sprite_width, sprite_height, action_name, repeat=True, duration=40, **kwargs):
             """
             xo,yo: Pontos iniciais no canto superior esquerdo
-            sprite_width,sprite_height: Comprimento da sprite
+            sprite_width,sprite_height: Largura e altura da sprite
             action_name: Nome da ação
             repeat: Verdadeiro para repetir sem parar, Falso para rodar apenas uma vez
             duration: Duração da animação em milesegundos
