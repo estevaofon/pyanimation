@@ -27,4 +27,5 @@ Look in the example folder for complete examples.
 Quick Guide
 -----
 `Tutorial - English <https://github.com/estevaofon/pyanimation/blob/master/docs/index-en.rst>`_
+
 `Tutorial - Portuguese <https://github.com/estevaofon/pyanimation/blob/master/docs/index-pt.rst>`_
