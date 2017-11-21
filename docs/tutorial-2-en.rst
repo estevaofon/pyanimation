@@ -2,7 +2,9 @@ Quick Guide
 ===========
 Introduction to the basics
 
-.. image:: /examples/images/spritesheet.png
+.. raw:: html
+
+    <img src="/examples/images/link.png" width="400px">
 
 Create the animation object
 -----
@@ -10,9 +12,9 @@ Create the animation objecting passing the path to the sprite file
 
 .. code-block:: python
 
-    girl = Animation("images/spritesheet.png")
+    link = Animation("images/link.png")
 
-Create the animation
+Setting up the animation
 -----
 Create the animation setting it's paramenters, the create animation has the signature bellow
 
@@ -33,24 +35,24 @@ Create the animation setting it's paramenters, the create animation has the sign
             cols: the vertical separation of sprites
             """
 
-The origin of the image is xo=0, and y0=0. Each sprite or frame of this image has a widht=125 and a height =125. And we choose to call the animation "run". Which Animation object can have multiple animations actions for example run, punch, kick, etc. You can name it whatever you want.
+At this time we will create to animations
 
 .. code-block:: python
 
-    girl.create_animation(0, 0, 125, 125, "run")
+    link.create_animation(0, 525, 121, 132, "front", duration=90, rows=1)
+    link.create_animation(0, 782, 121, 132, "back", duration=90, rows=1)
 
 Update the Animation
 ---------------
 Update the animation in the pygame loop. Use the x, y coordinates to place the animation where you want. 
 
+
 .. code-block:: python
 
-    screen.blit(girl.update_surface(), (girl.x, girl.y))
+    screen.blit(link.update_surface(), (link.x, link.y))
 
 And it's ready!
 
-.. image:: /examples/images/showcase.gif
+.. image:: /examples/images/link.gif
 
-This complete example is at `examples\\example1.py <https://github.com/estevaofon/pyanimation/blob/master/examples/example1.py>`_
-
-`Example 2 - Animation of the Link from Zelda <https://github.com/estevaofon/pyanimation/blob/master/docs/tutorial-2.rst>`_
+This complete example is at `examples\\example4.py <https://github.com/estevaofon/pyanimation/blob/master/examples/example4.py>`_
