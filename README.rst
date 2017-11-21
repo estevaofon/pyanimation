@@ -4,7 +4,6 @@ A python module to easily create animations in pygame
 
 .. image:: /examples/images/spritesheet.png
 
-
 Setup
 -----
 
@@ -24,3 +23,7 @@ Code sample
 Look in the example folder for complete examples.
 
 .. image:: /examples/images/showcase.gif
+
+Quick Guide
+-----
+`Example 1 <https://github.com/estevaofon/pyanimation/blob/master/docs/index.rst>`_
