@@ -44,6 +44,7 @@ Depois de escolhidos os frames. Utilizares o método build_animation para montar
 Para fazer o goku carregando a energia, selecionaremos dois frames, e montaremos a animação com o build animation
 
 .. code-block:: python
+
     goku.insert_frame(115, 1400, 83, 90)
     goku.insert_frame(195, 1400, 83, 90)
     goku.build_animation("load", repeat=False, duration=250)
