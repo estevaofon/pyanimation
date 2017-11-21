@@ -26,4 +26,4 @@ Look in the example folder for complete examples.
 
 Quick Guide
 -----
-`Example 1 <https://github.com/estevaofon/pyanimation/blob/master/docs/index.rst>`_
+`Tutorial <https://github.com/estevaofon/pyanimation/blob/master/docs/index.rst>`_
