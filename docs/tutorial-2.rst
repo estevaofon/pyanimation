@@ -3,6 +3,7 @@ Guia Rápido
 Introdução ao básico
 
 .. image:: /examples/images/link.png
+   :scale: 20 %
 
 Crie o objeto de animação
 -----
