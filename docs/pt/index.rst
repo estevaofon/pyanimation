@@ -53,4 +53,4 @@ E pronto, a animação está feita!
 
 Esse exemplo completo está em `examples\\example1.py <https://github.com/estevaofon/pyanimation/blob/master/examples/example1.py>`_
 
-`Exemplo 2 - Animação do personagem link do zelda <https://github.com/estevaofon/pyanimation/blob/master/docs/tutorial-2-pt.rst>`_
+`Exemplo 2 - Animação do personagem link do zelda <https://github.com/estevaofon/pyanimation/blob/master/docs/pt/tutorial-2.rst>`_

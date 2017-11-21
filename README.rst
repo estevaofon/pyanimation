@@ -26,6 +26,6 @@ Look in the example folder for complete examples.
 
 Quick Guide
 -----
-`Tutorial - English <https://github.com/estevaofon/pyanimation/blob/master/docs/index-en.rst>`_
+`Tutorial - English <https://github.com/estevaofon/pyanimation/blob/master/docs/en/index.rst>`_
 
-`Tutorial - Portuguese <https://github.com/estevaofon/pyanimation/blob/master/docs/index-pt.rst>`_
+`Tutorial - Portuguese <https://github.com/estevaofon/pyanimation/blob/master/docs/pt/index.rst>`_
