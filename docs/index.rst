@@ -6,7 +6,7 @@ Introduction to the basics
 
 Create the animation object
 -----
-Create the animation objecting passing the path to the sprite
+Create the animation objecting passing the path to the sprite file
 
 .. code-block:: python
 
@@ -33,19 +33,22 @@ Create the animation setting it's paramenters, the create animation has the sign
             cols: the vertical separation of sprites
             """
 
-the origin of the image is (0,0). The heigh and widht are 125. And we choose to call the animation "run".
+The origin of the image is xo=0, and y0=0. Each sprite or frame of this image has a widht=125 and a height =125. And we choose to call the animation "run". Which Animation object can have multiple animations actions for example run, punch, kick, etc. You can name it whatever you want.
 
 .. code-block:: python
 
     girl.create_animation(0, 0, 125, 125, "run")
 
 Update the Animation
------
-Using it's coordinates
+---------------
+Update the animation in the pygame loop. Use the x, y coordinates to place the animation where you want. 
 
 .. code-block:: python
 
     screen.blit(girl.update_surface(), (girl.x, girl.y))
 
 And it's ready!
+
 .. image:: /examples/images/showcase.gif
+
+This complete example is at ``examples\example1.py``
