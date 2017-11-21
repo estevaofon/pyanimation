@@ -59,3 +59,5 @@ E pronto! Rode o exemplo no seu computador para ver as duas animações geradas.
 .. image:: /examples/images/link.gif
 
 O exemplo completo se encontra em `examples\\example4.py <https://github.com/estevaofon/pyanimation/blob/master/examples/example4.py>`_
+
+`Parte 3 - Criando Animações com sprites desorganizadas <https://github.com/estevaofon/pyanimation/blob/master/docs/pt/tutorial-3.rst>`_
