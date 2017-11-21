@@ -36,7 +36,7 @@ Configure a animação com o método create_animation
 
 
 Esse arquivo contém várias animações diferentes, por exemplo andar para frente, andar de lado. E cada ação está contida em uma linha separada.
-Vamos fazer a animação do personagem olhar olhando para o jogador. A ação agora começa no ponto 0, 525 (ponto superior esquerdo), o comprimeto da sprite é
+Vamos fazer a animação do personagem andar olhando para o jogador. A origem da ação está no ponto 0, 525, o comprimeto da sprite é
 de 121, e sua altura é de 132. Nomearemos essa ação de "front". Precisamos ajustar o valor da duração para 90, caso contrário a animação fica muito rápida.
 E como dissemos cada ação está contida em uma linha, por isso utilizamos o parametro rows=1, para realizar esse fatiamento.
 Os mesmo passos são realizados para montar a animação "back".
