@@ -13,7 +13,7 @@ clock = pygame.time.Clock()
 delta = 2
 
 horse = Animation("images/horse-couting.gif")
-horse.create_animation(0, 0, 183, 122, 4, "riding", duration=500, rows=4)
+horse.create_animation(0, 0, 183, 122, "riding", duration=500)
 #remove last black frame
 horse.frame_list("riding").pop()
 

@@ -94,18 +94,32 @@ class Animation:
         import os
         image_path = os.path.abspath(image_path)
         self.sprite_sheet = (pygame.image.load(image_path).convert_alpha())
+        self.width, self.height = self.sprite_sheet.get_size()
 
-    def create_animation(self, xo, yo, sprite_width, sprite_height, cols, action_name, repeat=True, duration=40, rows=1):
+    def create_animation(self, xo, yo, sprite_width, sprite_height, action_name, repeat=True, duration=40, **kwargs):
         """
         Create an intire animation and sets a label to the animation
         xo,yo: initial points at the top left corner
         sprite_width,sprite_height: length of sprites
-        rows: a row is an horizontal sequence of sprites
-        cols: the vertical separation of sprites
         action_name: a name to an animaiton action
         repeat: True to perform a non-stop animation, False to run just once
         duration: duration of the animation in milliseconds
+
+        Optional kwargs
+        to use just some slices of a sprite image
+        rows: a row is an horizontal sequence of sprites
+        cols: the vertical separation of sprites
         """
+        if kwargs:
+            if "rows" in kwargs:
+                rows = kwargs["rows"]
+            if "cols" in kwargs:
+                cols = kwargs["cols"]
+        if not ('rows' in locals()):
+            rows = int(self.height/sprite_height)
+        if not ('cols' in locals()):
+            cols = int(self.width/sprite_width)
+
         speed = round(duration/16.66)
         if speed <= 0:
             speed = 1

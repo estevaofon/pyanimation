@@ -14,7 +14,7 @@ clock = pygame.time.Clock()
 goku = Animation("images/goku-ss4.png")
 
 # automatic creatin stand by position
-goku.create_animation(0, 0, 48, 70, 4, "down", repeat=True, duration=250)
+goku.create_animation(0, 0, 48, 70, "down", repeat=True, duration=250, rows=1, cols=4)
 
 # manual creation frame by frame
 #kick

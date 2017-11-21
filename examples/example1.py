@@ -12,7 +12,7 @@ surface.fill((255,255,255))
 clock = pygame.time.Clock()
 
 girl = Animation("images/spritesheet.png")
-girl.create_animation(0, 0, 125, 125, 4, "run", duration=40, rows=4)
+girl.create_animation(0, 0, 125, 125, "run", duration=40)
 
 screen.blit(surface, (0, 0))
 
