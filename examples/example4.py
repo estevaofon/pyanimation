@@ -12,8 +12,8 @@ surface.fill((255,255,255))
 clock = pygame.time.Clock()
 
 link = Animation("images/link.png")
-link.create_animation(0, 525, 121, 132, "front", duration=90, rows=1)
-link.create_animation(0, 782, 121, 132, "back", duration=90, rows=1)
+link.create_animation(0, 525, 120, 132, "front", duration=90, rows=1)
+link.create_animation(0, 782, 120, 132, "back", duration=90, rows=1)
 
 
 screen.blit(surface, (0, 0))
