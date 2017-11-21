@@ -17,6 +17,7 @@ Create the animation
 Create the animation setting it's paramenters, the create animation has the signature bellow
 
 .. code-block:: python
+
     def create_animation(self, xo, yo, sprite_width, sprite_height, action_name, repeat=True, duration=40, **kwargs):
             """
             Create an intire animation and sets a label to the animation
@@ -33,13 +34,17 @@ Create the animation setting it's paramenters, the create animation has the sign
             """
 
 the origin of the image is (0,0). The heigh and widht are 125. And we choose to call the animation "run".
+
 .. code-block:: python
+
     girl.create_animation(0, 0, 125, 125, "run")
 
 Update the Animation
 -----
 Using it's coordinates
+
 .. code-block:: python
+
     screen.blit(girl.update_surface(), (girl.x, girl.y))
 
 And it's ready!
