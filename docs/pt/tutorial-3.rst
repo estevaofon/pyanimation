@@ -28,8 +28,8 @@ Dessa vez precisaremos utilizar o método insert_frame
         sprite_width,sprite_height: length of sprites
         """
 
-Com o método insert_frame selecionaremos frame por frame que utilizaremos, indicando a origem do frame, e a largura e altura
-Depois de escolhidos os frames. Utilizares o método build_animation para montar a animação com frames selecionados.
+Com o método insert_frame selecionaremos frame por frame que utilizaremos, indicando a origem do frame, a largura e altura.
+Depois de escolhidos os frames. Utilizares o método build_animation para montar a animação com os frames selecionados.
 
 .. code-block:: python
     def build_animation(self, action_name, repeat=True, duration=40):
