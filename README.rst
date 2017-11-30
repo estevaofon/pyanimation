@@ -2,7 +2,7 @@ Pyanimation
 ===========
 A python module to easily create animations in pygame
 
-.. image:: /examples/images/spritesheet.png
+.. image:: https://raw.githubusercontent.com/estevaofon/pyanimation/master/examples/images/spritesheet.png
 
 Setup
 -----
@@ -12,7 +12,7 @@ Setup
     $ pip install pyanimation
 
 Code sample
------
+-----------
 
 .. code-block:: python
 
@@ -22,9 +22,9 @@ Code sample
 
 Look in the example folder for complete examples.
 
-.. image:: /examples/images/showcase.gif
+.. image:: https://raw.githubusercontent.com/estevaofon/pyanimation/master/examples/images/spritesheet.png
 
 Quick Guide
------
+-----------
 
 `Tutorial - Portuguese <https://github.com/estevaofon/pyanimation/blob/master/docs/pt/index.rst>`_
