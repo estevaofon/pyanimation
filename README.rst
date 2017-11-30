@@ -22,7 +22,7 @@ Code sample
 
 Look in the example folder for complete examples.
 
-.. image:: https://raw.githubusercontent.com/estevaofon/pyanimation/master/examples/images/spritesheet.png
+.. image:: https://raw.githubusercontent.com/estevaofon/pyanimation/master/examples/images/showcase.gif
 
 Quick Guide
 -----------
